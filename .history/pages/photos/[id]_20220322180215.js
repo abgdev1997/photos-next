@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router'
 import { Grid, Flex, Box } from '@chakra-ui/react'
-import Head from 'next/head';
 
 const Photo = ({photo}) => {
 
@@ -9,21 +8,16 @@ const Photo = ({photo}) => {
     const { id } = router.query;
 
     return (
-        <>
-            <Head>
-                <title>Photo {id}</title>
-            </Head>
-            <Flex direction="column" align="center" justify="center" gap={40}>
-                <Flex direction="row" gap={40} align="center" justify="center"> 
-                    <img src={photo.url}></img>
-                    <img src={photo.thumbnailUrl}></img>
-                </Flex>
-                <Flex direction="row" align="center" justify="center" gap={40}>
-                    <Box fontSize="40px">{photo.id}</Box>
-                    <Box fontSize="30px">{photo.title}</Box>
-                </Flex>
+        <Flex direction="column" align="center" justify="center" gap={40}>
+            <Flex direction="row" gap={40} align="center" justify="center"> 
+                <img src={photo.url}></img>
+                <img src={photo.thumbnailUrl}></img>
             </Flex>
-        </>
+            <Flex direction="row" align="center" justify="center" gap={40}>
+                <Box fontSize="40px">{photo.id}</Box>
+                <Box fontSize="30px">{photo.title}</Box>
+            </Flex>
+        </Flex>
     );
 }
 
