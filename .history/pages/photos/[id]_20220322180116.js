@@ -13,10 +13,8 @@ const Photo = ({photo}) => {
                 <img src={photo.url}></img>
                 <img src={photo.thumbnailUrl}></img>
             </Flex>
-            <Flex direction="row" align="center" justify="center" gap={40}>
-                <Box fontSize="40px">{photo.id}</Box>
-                <Box fontSize="30px">{photo.title}</Box>
-            </Flex>
+            <Box fontSize="40px">{photo.id}</Box>
+            <Box fontSize="30px">{photo.title}</Box>
         </Flex>
     );
 }
