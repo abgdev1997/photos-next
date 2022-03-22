@@ -2,7 +2,6 @@ import React from 'react';
 import { useRouter } from 'next/router'
 import { Grid, Flex, Box } from '@chakra-ui/react'
 import Head from 'next/head';
-import Link from 'next/link';
 
 const Photo = ({photo}) => {
 
@@ -23,9 +22,6 @@ const Photo = ({photo}) => {
                     <Box fontSize="40px">{photo.id}</Box>
                     <Box fontSize="30px">{photo.title}</Box>
                 </Flex>
-                <Link href="/photos">
-                    <button>Go Back</button>
-                </Link>
             </Flex>
         </>
     );
